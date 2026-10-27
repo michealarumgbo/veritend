@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --color-navy: #142b4a;
+  --color-royal: #3563e9;
+  --color-teal: #14b8a6;
+  --color-page: #f5f7fb;
+}
+body {
+  background: var(--color-page);
+  color: #1e293b;
+}
+:focus-visible {
+  outline: 2px solid var(--color-royal);
+  outline-offset: 2px;
+}
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition disabled:opacity-50 bg-navy text-white hover:bg-royal;
+}
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition disabled:opacity-50 border border-slate-200 bg-white text-slate-700 hover:bg-slate-50;
+}
+.input {
+  @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm;
+}
+.card {
+  @apply rounded-xl border border-slate-200 bg-white p-5 shadow-sm;
+}
