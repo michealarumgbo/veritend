@@ -3,7 +3,7 @@ const base = {
   signed: true,
   httpOnly: true,
   secure: prod,
-  sameSite: prod ? "strict" : "lax",
+  sameSite: prod ? "none" : "lax",
 };
 export const accessCookieOptions = { ...base, maxAge: 60 * 60 * 1000 };
 export const refreshCookieOptions = {
